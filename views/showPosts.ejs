@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body         { padding-top:80px; word-wrap:break-word; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> show posts</h1>
+        <a href="/showPosts" class="btn btn-default btn-sm">Home</a>
+        <a href="/createPost" class="btn btn-default btn-sm">create post</a>
+        <!--<a href="/showPosts" class="btn btn-default btn-sm">show posts</a>-->
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            
+
+        </div>
+        
+        <% post.reverse().forEach(function (x) { %>
+        <div class="well">
+            <h2> <%=x["header"] %> </h2>
+            <p><%=x["body"] %></p>
+            </div>
+        <% }) %>
+        
+    </div>
+</div>
+</body>
+</html>
